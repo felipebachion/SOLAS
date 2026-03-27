@@ -88,6 +88,21 @@ body::before {
     gap: 16px;
 }
 
+.hero-image-frame {
+    margin: 22px 0 0;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--shadow);
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+}
+
 .brand-lockup {
     display: flex;
     align-items: center;
@@ -285,7 +300,8 @@ p {
 .benefit-grid,
 .attribute-grid,
 .process-grid,
-.publication-list {
+.publication-list,
+.contact-grid {
     display: grid;
     gap: 16px;
 }
@@ -310,11 +326,16 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .story-card,
 .benefit-card,
 .attribute-card,
 .process-step,
-.publication-card {
+.publication-card,
+.contact-card {
     padding: 22px;
 }
 
@@ -322,9 +343,28 @@ p {
 .benefit-card p,
 .attribute-card p,
 .process-step p,
-.publication-card p {
+.publication-card p,
+.contact-card p {
     margin-top: 10px;
     color: var(--muted);
+}
+
+.contact-card {
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+}
+
+.contact-card a {
+    color: var(--accent-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
 
 .process-step span {
@@ -395,7 +435,8 @@ p {
     .benefit-grid,
     .attribute-grid,
     .process-grid,
-    .publication-list {
+    .publication-list,
+    .contact-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -418,7 +459,8 @@ p {
     .benefit-grid,
     .attribute-grid,
     .process-grid,
-    .publication-list {
+    .publication-list,
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
