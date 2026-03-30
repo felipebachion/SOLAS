@@ -82,9 +82,11 @@ body::before {
 }
 
 .topbar {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    min-height: 108px;
     gap: 16px;
 }
 
@@ -115,10 +117,15 @@ body::before {
 .brand-lockup {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: center;
+    width: 100%;
 }
 
 .brand-logo {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 154px;
     height: auto;
     object-fit: contain;
@@ -126,6 +133,11 @@ body::before {
 }
 
 .brand-logo-right {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 50%;
+    transform: translateY(-50%);
     width: 150px;
 }
 
@@ -133,14 +145,14 @@ body::before {
     margin: 0 0 8px;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    text-align: centre;
+    text-align: center;
     font-size: 0.72rem;
     font-weight: 800;
     color: var(--gold);
 }
 
 .hero-lab-name {
-    text-align: centre;
+    text-align: center;
     margin: 0;
     color: #ffffff;
     font-size: 1rem;
@@ -549,12 +561,26 @@ p {
     }
 
     .topbar {
+        position: static;
         align-items: center;
         flex-direction: column;
+        justify-content: center;
+        min-height: 0;
     }
 
     .brand-logo {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
         width: 128px;
+    }
+
+    .brand-logo-right {
+        position: static;
+        right: auto;
+        top: auto;
+        transform: none;
     }
 
     .facility-card {
